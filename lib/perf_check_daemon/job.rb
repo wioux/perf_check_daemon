@@ -164,7 +164,7 @@ module PerfCheckDaemon
           sprintf('%.1fx faster than %s', test_case.speedup_factor.abs, ref)
         else
           "about the same as #{ref}"
-        end + sprintf(' (%dms vs %dms)', test_case.this_latency, test_case.reference_latency)
+        end + sprintf(' (This branch: %dms vs Ref branch: %dms)', test_case.this_latency, test_case.reference_latency)
       end
 
       def query_check_and_change(test_case)
